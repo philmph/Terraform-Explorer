@@ -19,11 +19,6 @@ locals {
   # Using key only results in key being the value as also seen in the object_loop_omit
   object_loop_key_wrongfully_expected = [for key in local.object : "I am actually the value=${key}"]
 
-  map = tomap({
-    key1 = "value1"
-    key2 = "value2"
-  })
-
   tuple = [
     "value1",
     "value2",
@@ -37,6 +32,12 @@ locals {
 
   # Using _ does not /dev/null like in go, _ is still usable
   tuple_loop_using_ = [for _, obj in local.tuple : "iterator=${_}, obj=${obj}"]
+
+  # Structures below are not used because they behave the same as the default assignments object = {} and tuple = []
+  map = tomap({
+    key1 = "value1"
+    key2 = "value2"
+  })
 
   list = tolist([
     "value1",
