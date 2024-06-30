@@ -1,4 +1,4 @@
-# loop-defaults
+# for-loop-object-handling
 
 I wanted to test if using `_` actually has any use in Terraform as compared to go.
 
