@@ -1,3 +1,4 @@
+# Preferred to be able to use module default values and keeping it readable
 variable "input1" {
   type = list(object({
     name         = string
