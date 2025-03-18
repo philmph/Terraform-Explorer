@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.hcl": "hcl",
+    "*.tftpl": "hcl"
+  }
+}
