@@ -1,0 +1,12 @@
+input:
+  - name: yaml_1_nullable_set
+    nullable: "input"
+
+  - name: yaml_2_not_nullable_set
+    not_nullable: "input"
+
+  - name: yaml_3_all_set
+    nullable: "input"
+    not_nullable: "input"
+
+  - name: yaml_4_none_set

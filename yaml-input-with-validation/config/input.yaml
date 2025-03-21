@@ -1,0 +1,18 @@
+input:
+  - name: yaml_1_nullable_set
+    config:
+      nullable: input
+
+  - name: yaml_2_not_nullable_set
+    config:
+      not_nullable: input
+
+  - name: yaml_3_all_set
+    config:
+      nullable: input
+      not_nullable: input
+
+  - name: yaml_4_none_set
+
+  - name: yaml_5_not_included_key_set
+    unrelated: true
