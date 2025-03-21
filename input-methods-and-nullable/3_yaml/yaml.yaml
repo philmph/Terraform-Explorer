@@ -1,0 +1,9 @@
+input:
+  - name: yaml1_1
+    nullable: "input"
+  - name: yaml1_2
+    not_nullable: "input"
+  - name: yaml1_3
+    nullable: "input"
+    not_nullable: "input"
+  - name: yaml1_4
