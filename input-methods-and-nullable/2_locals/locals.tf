@@ -1,20 +1,20 @@
 locals {
   locals = [
     {
-      name     = "locals1_1_nullable_set"
+      name     = "locals_1_nullable_set"
       nullable = "input"
     },
     {
-      name         = "locals1_2_not_nullable_set"
+      name         = "locals_2_not_nullable_set"
       not_nullable = "input"
     },
     {
-      name         = "locals1_3_all_set"
+      name         = "locals_3_all_set"
       nullable     = "input"
       not_nullable = "input"
     },
     {
-      name = "locals1_4_none_set"
+      name = "locals_4_none_set"
     }
   ]
 
@@ -30,7 +30,9 @@ locals {
     not_nullable = null
   }
 
+  # ! May be breaking if module doesn't use nullable = false
   # Preferred to be able to use module default values and keeping it readable
+  # Note that multi-layer objects do not work with merges like this
   locals_merged_2_w_null = [for i, o in local.locals : merge(local.defaults_for_locals_merged_2, o)]
 
   locals_merged_3_w_lookup_defaults = [for i, o in local.locals :
